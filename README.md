@@ -14,10 +14,10 @@ fyne-starter-bitrise is a quick start to CI for fyne. It provided the configurat
     - Select the "Restart scanning without validation" radio button
         - Click the "Next" button
 1. Select "Other / Manual" for the project build configuration.
-  - Chose a stack such as Android & Docker, on Ubuntu 16.04
-    - Click the "I'm Ready" button
+    - Chose a stack such as Android & Docker, on Ubuntu 16.04
+        - Click the "I'm Ready" button
 1. Upload an App Icon or click "Skip for Now"
-1. Click the "Register Webhook for me!" or "Skip the webhook registration" button.
+1. Click the "Register Webhook for me!" button.
 1. A build will kick off, but it doesn't use the bitrise.yml file from the repo
 1. Click "Open Workflow Editor"
 1. Click "BitRise.yml"
