@@ -2,7 +2,7 @@
 fyne-starter-bitrise
 
 # Setup
-1. Clone this repo by using [this template](http://template.link "Template Link")
+1. Clone this repo by using [this template](http://template.link "https://github.com/garrettcorn/fyne-starter-bitrise/generate")
 1. Sign up at BitRise
     - [Referral Link](https://app.bitrise.io/referral/1cfba1cf5ffbaf60 "BitRise Referral Link") 
     - [Non-Referral Link](https://app.bitrise.io/ "BitRise Non-Referral Link")
