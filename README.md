@@ -12,7 +12,7 @@ fyne-starter-bitrise is a quick start to CI for fyne. It provided the configurat
 1. Type in "master" for branch selection
 1. There will likely be a message about "An error occured during the validation process"
     - Select the "Restart scanning without validation" radio button
-      - Click the "Next" button
+        - Click the "Next" button
 1. Select "Other / Manual" for the project build configuration.
   - Chose a stack such as Android & Docker, on Ubuntu 16.04
     - Click the "I'm Ready" button
