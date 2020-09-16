@@ -1,5 +1,5 @@
 # fyne-starter-bitrise
-fyne-starter-bitrise
+fyne-starter-bitrise is a quick start to CI for fyne. It provided the configuration necessary to start producting multi-platform and architecture applications using the go programming language.
 
 # Setup
 1. Clone this repo by using [this template](http://template.link "https://github.com/garrettcorn/fyne-starter-bitrise/generate")
@@ -24,4 +24,4 @@ fyne-starter-bitrise
 1. Click "Store in app repository"
 1. Click "Update Settings"
 1. Click "Continue." Now the builds will be based off of the bitrise.yml file in the repository.
-1. Now whenever a change is pushed to your new repo a BitRise build will kick off and will spit out Windows(amd64,386), Linux(amd64,386,arm,arm64),darwin(amd64), and android(combined apk)
+1. Now whenever a change is pushed to your new repo a BitRise build will kick off and will spit out Windows(amd64,386), Linux(amd64,386,arm,arm64), Darwin(amd64), and Android(combined apk)
