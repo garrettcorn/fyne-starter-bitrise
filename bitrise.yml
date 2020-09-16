@@ -1,0 +1,98 @@
+---
+  format_version: '8'
+  default_step_lib_source: 'https://github.com/bitrise-io/bitrise-steplib.git'
+  project_type: other
+  trigger_map:
+  - push_branch: '*'
+    workflow: primary
+  - push_branch: master
+    workflow: Build
+  - pull_request_source_branch: '*'
+    workflow: primary
+  workflows:
+    primary:
+      steps:
+      - activate-ssh-key@4:
+          run_if: '{{getenv "SSH_RSA_PRIVATE_KEY" | ne ""}}'
+      - git-clone@4: {}
+      - script@1:
+          title: Do anything with Script step
+      - deploy-to-bitrise-io@1: {}
+    Build:
+      steps:
+      - activate-ssh-key@4:
+          run_if: '{{getenv "SSH_RSA_PRIVATE_KEY" | ne ""}}'
+      - git-clone@4: {}
+      - script@1:
+          inputs:
+          - content: >-
+              #!/usr/bin/env bash
+  
+              # fail if any commands fails
+  
+              set -e
+  
+              # debug log
+  
+              set -x
+  
+  
+              # variables
+  
+              APP_NAME=myapp
+  
+  
+              # write your script here
+  
+              go get github.com/lucor/fyne-cross/v2/cmd/fyne-cross
+  
+              ls
+  
+  
+              fyne-cross darwin -arch=amd64 -pull
+  
+              fyne-cross linux -arch=* -pull
+  
+              fyne-cross windows -arch=* -pull
+  
+              fyne-cross android -pull
+  
+  
+              zip -9 -r -q $BITRISE_DEPLOY_DIR/$APP_NAME-darwin-amd64.app.zip
+              fyne-cross/dist/darwin-amd64/*.app
+  
+              cp fyne-cross/dist/android/*.apk
+              $BITRISE_DEPLOY_DIR/$APP_NAME-android-all.apk
+  
+              cp fyne-cross/dist/linux-386/*.tar.gz
+              $BITRISE_DEPLOY_DIR/$APP_NAME-linux-386.tar.gz
+  
+              cp fyne-cross/dist/linux-amd64/*.tar.gz
+              $BITRISE_DEPLOY_DIR/$APP_NAME-linux-amd64.tar.gz
+  
+              cp fyne-cross/dist/linux-arm/*.tar.gz
+              $BITRISE_DEPLOY_DIR/$APP_NAME-linux-arm.tar.gz
+  
+              cp fyne-cross/dist/linux-arm64/*.tar.gz
+              $BITRISE_DEPLOY_DIR/$APP_NAME-linux-arm64.tar.gz
+  
+              cp fyne-cross/dist/windows-386/*.zip
+              $BITRISE_DEPLOY_DIR/$APP_NAME-windows-386.zip
+  
+              cp fyne-cross/dist/windows-amd64/*.zip
+              $BITRISE_DEPLOY_DIR/$APP_NAME-windows-amd64.zip
+  
+  
+              # or run a script from your repository, like:
+  
+              # bash ./path/to/script.sh
+  
+              # not just bash, e.g.:
+  
+              # ruby ./path/to/script.rb
+          title: Builds
+      - deploy-to-bitrise-io@1: {}
+      meta:
+        bitrise.io:
+          stack: linux-docker-android
+  
