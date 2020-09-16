@@ -5,10 +5,6 @@
   trigger_map:
   - push_branch: '*'
     workflow: primary
-  - push_branch: master
-    workflow: Build
-  - pull_request_source_branch: '*'
-    workflow: primary
   workflows:
     primary:
       steps:
