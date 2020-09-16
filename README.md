@@ -24,4 +24,6 @@ fyne-starter-bitrise is a quick start to CI for fyne. It provided the configurat
 1. Click "Store in app repository"
 1. Click "Update Settings"
 1. Click "Continue." Now the builds will be based off of the bitrise.yml file in the repository.
-Now when a change is pushed to your repo a BitRise build will kick off and spit out Windows(amd64,386), Linux(amd64,386,arm,arm64), Darwin(amd64), and Android(combined apk) executables that can distributed and run on their respective platforms.
+
+# Result
+When a change is pushed to the new repo a BitRise build will kick off and spit out Windows(amd64,386), Linux(amd64,386,arm,arm64), Darwin(amd64), and Android(combined apk) executables that can distributed and run on their respective platforms.
