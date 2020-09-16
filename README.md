@@ -6,7 +6,7 @@ fyne-starter-bitrise
 1. Sign up at BitRise
     - [Referral Link](https://app.bitrise.io/referral/1cfba1cf5ffbaf60 "BitRise Referral Link") 
     - [Non-Referral Link](https://app.bitrise.io/ "BitRise Non-Referral Link")
-1. [Add new App to BitRise](https://app.bitrise.io/apps/add "BitRise add app")
+1. [Add a new App to BitRise](https://app.bitrise.io/apps/add "BitRise add app")
     - Allow BitRise access to you github account if needed
 1. Find this starter in your github repos
 1. Type in "master" for branch selection
