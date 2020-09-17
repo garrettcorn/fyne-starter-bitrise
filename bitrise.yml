@@ -5,20 +5,8 @@
   trigger_map:
   - push_branch: '*'
     workflow: primary
-  - push_branch: master
-    workflow: Build
-  - pull_request_source_branch: '*'
-    workflow: primary
   workflows:
     primary:
-      steps:
-      - activate-ssh-key@4:
-          run_if: '{{getenv "SSH_RSA_PRIVATE_KEY" | ne ""}}'
-      - git-clone@4: {}
-      - script@1:
-          title: Do anything with Script step
-      - deploy-to-bitrise-io@1: {}
-    Build:
       steps:
       - activate-ssh-key@4:
           run_if: '{{getenv "SSH_RSA_PRIVATE_KEY" | ne ""}}'
