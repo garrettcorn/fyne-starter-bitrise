@@ -27,3 +27,8 @@ fyne-starter-bitrise is a quick start to CI for fyne. It provided the configurat
 
 # Result
 When a change is pushed to the new repo a BitRise build will kick off and spit out Windows(amd64,386), Linux(amd64,386,arm,arm64), Darwin(amd64), and Android(combined apk) executables that can distributed and run on their respective platforms.
+
+## Credit
+This project was made possible by fyne and fyne-cross. Please take a look at their respective projects below.
+- [fyne](https://fyne.io)
+- [fyne-cross](https://github.com/lucor/fyne-cross)
