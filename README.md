@@ -2,7 +2,7 @@
 fyne-starter-bitrise is a quick start to CI for fyne. It provided the configuration necessary to start producting multi-platform and architecture applications using the go programming language.
 
 # Setup
-1. Clone this repo by using [this template](http://template.link "https://github.com/garrettcorn/fyne-starter-bitrise/generate")
+1. Clone this repo by using [the template link](https://github.com/garrettcorn/fyne-starter-bitrise/generate "template link")
 1. Sign up at BitRise
     - [Referral Link](https://app.bitrise.io/referral/1cfba1cf5ffbaf60 "BitRise Referral Link") 
     - [Non-Referral Link](https://app.bitrise.io/ "BitRise Non-Referral Link")
